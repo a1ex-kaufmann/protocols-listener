@@ -6,7 +6,7 @@ const fs = require('fs');
 const WebSocket = require('ws');
 
 // Create an HTTP server to serve an HTML page
-const html = fs.readFileSync(__dirname + '/index.html');
+const html = fs.readFileSync(__dirname + '/templates/index.html');
 http.createServer((req, res) => {
     res.writeHead(200, { 'Content-type': 'text/html' });
     console.log(`HTTP ${req.method} request for ${req.url}`);
