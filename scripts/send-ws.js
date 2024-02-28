@@ -1,8 +1,10 @@
 const readline = require('readline');
 const WebSocket = require('ws');
 
+const port = process.argv[2];
+
 // WebSocket client
-const wsClient = new WebSocket('ws://localhost:9000');
+const wsClient = new WebSocket(`ws://localhost:${port}`);
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
